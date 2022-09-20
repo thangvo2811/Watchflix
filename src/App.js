@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import Footer from "./components/Footer";
+import LastWatch from "./components/LastWatch";
+import ListMovies from "./components/ListMovie";
+import Menu from "./components/Menu";
+import SeriesMovie from "./components/SeriesMovie/index";
 
 function App() {
+  const fakeData = [
+    {
+      name: "My Last Watch",
+      name_TopMovies: "Top Movies",
+      name_TopTV: "Top TV Show",
+      view_more: "View More",
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Menu />
+      <ListMovies />
+      {fakeData.map((item, index) => {
+        return (
+          <>
+            <LastWatch name={item.name} view={item.view_more} />
+            <LastWatch name={item.name_TopMovies} view={item.view_more} />
+            <LastWatch name={item.name_TopTV} view={item.view_more} />
+          </>
+        );
+      })}
+      <SeriesMovie />
+      <Footer />
     </div>
   );
 }

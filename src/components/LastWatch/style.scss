@@ -1,0 +1,61 @@
+.last_watch_container {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  .last_category {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 35px;
+    padding-top: 50px;
+  }
+
+  .last_watch_img {
+    .card_img {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 5px;
+
+      img {
+        width: 100%;
+        border-radius: 8px;
+        // object-fit: cover;
+      }
+      .last_item:first-child {
+        flex: 2 calc(66.66% - 16px);
+      }
+      .last_item {
+        display: flex;
+        flex: 1 calc(33.33% - 16px);
+        max-height: 560px;
+
+        .fantasy {
+          position: absolute;
+          background-color: orange;
+          padding: 3px 14px;
+          border-radius: 8px;
+          margin: 10px;
+        }
+        .watch_desc {
+          display: flex;
+          position: absolute;
+          align-self: flex-end;
+          padding-bottom: 150px;
+          padding-left: 20px;
+          .watch_content_item {
+            margin-right: 6px;
+          }
+        }
+        .watch_content_name {
+          width: 35%;
+          position: absolute;
+          align-self: flex-end;
+          padding-left: 20px;
+          padding-bottom: 60px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.series_movie {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  .series_content {
+    .series_movie_img {
+      position: relative;
+      display: flex;
+
+      img {
+        min-width: 1064px;
+        max-height: 560px;
+      }
+
+      .series_movie_desc {
+        width: 80%;
+        position: absolute;
+        align-self: flex-end;
+        padding: 20px;
+
+        .series_movie_overview {
+          color: #e6e6e6;
+        }
+      }
+
+      .series_movie_icon {
+        position: absolute;
+        left: 47%;
+        top: 37%;
+        font-size: 64px;
+        color: #fed530;
+        cursor: pointer;
+        transition: 0.5s;
+
+        :hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  .series_movie_trailer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    .series_movie_item {
+      position: relative;
+      display: flex;
+      // min-width: 400px;
+      // min-height: 150px;
+      min-width: 400px;
+      .series_movie_trailer_icon {
+        position: absolute;
+        left: 17%;
+        top: 31%;
+        color: #fed530;
+        font-size: 32px;
+        transition: 0.4s;
+        cursor: pointer;
+
+        :hover {
+          opacity: 0.8;
+        }
+      }
+      img {
+        min-width: 176px;
+        max-height: 176px;
+        object-fit: cover;
+      }
+      .series_movie_container {
+        padding: 10px;
+        .episode_movie_content {
+          min-width: 176px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          line-height: 16px;
+          -webkit-line-clamp: 2;
+          min-height: 48px;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+        }
+        .episode {
+          color: #e6e6e6;
+        }
+        .episode_movie_name {
+          margin-top: 16px;
+          font-size: 19px;
+        }
+        .episode_movie_content {
+          margin-top: 10px;
+          color: #e6e6e6;
+        }
+        .episode_movie_date_view {
+          display: flex;
+          margin-top: 10px;
+          color: #cccccc;
+
+          .episode_movie_date {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
